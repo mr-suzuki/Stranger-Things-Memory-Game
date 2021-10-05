@@ -2,6 +2,7 @@ class AudioController{
     constructor(){
         this.flipSound = new Audio('Assets/Audio/flip.wav');
         this.matchSound = new Audio('Assets/Audio/match.wav');
+        this.matchSound.volume=1.5;
         this.gameOverSound = new Audio('Assets/Audio/gameOver.wav');
         this.victorySound = new Audio('Assets/Audio/victory.wav');
         this.bgMusic = new Audio('Assets/Audio/stringer-things-sound.mp3');
