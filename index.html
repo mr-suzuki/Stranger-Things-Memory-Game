@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" async></script>
+    </head>
+    <body>
+        <h1 class ="page-title">STRINGY THINGS</h1>
+        <div class="welcome-text overlay-text visible">STRINGY THINGS <span class = "welcome-small-text visible">Click Anywhere to Start</span></div>
+        <div id ="game-over" class="overlay-text">GAME OVER <span class="game-over-text-small">Click to restart</span></div>
+        <div id="winner-text" class="overlay-text">Well Done! <span>Now you can enter the upside down!</span></div>
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Score:<span id="score"> 0</span>
+            </div>
+        </div>
+        <div class="game-container">
+            
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value" src="Assets/img/alexei.jpg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value" src="Assets/img/alexei.jpg">     
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/erica-sinclair.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/erica-sinclair.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/Billy.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/Billy.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/eleven.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/eleven.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/steve.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/steve.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/will.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/will.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/mike.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/mike.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/dustin-s1.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/dustin-s1.jpeg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/lucas-s3.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img src="Assets/img/card-back.png"/>
+                </div>
+                <div class="card-front card-face">
+                    <img class = "card-value"src="Assets/img/lucas-s3.png">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

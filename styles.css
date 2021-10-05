@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'ITC Benguiat';
+    src: url(../Fonts/BenguiatITCbyBT-Bold.otf);
+}
+*{
+    box-sizing: border-box;
+    
+}
+
+html{
+    min-height: 100vh;
+    
+}
+
+body{
+    margin:0;
+    background:#000;
+}
+.page-title{
+    color:red;
+    max-width:100%;
+    text-align: center;
+    font-size: 4rem;
+    opacity:0.7;
+    border-style:double;
+    font-family: 'ITC Benguiat';
+   
+    /* text-shadow: -0.05rem -0.05rem 1px #ed2b12,
+    0.05rem -0.05rem 1px #ed2b12,
+    -0.05rem 0.05rem 1px #ed2b12,
+    0.05rem 0.05rem 1px #ed2b12,
+    0 0 15px #630100,
+    0 0 20px #450100; */
+}
+.game-info{
+    color:white;
+    opacity:0.7;
+    font-size: 2.5rem;
+    font-family: 'ITC Benguiat';
+    font-style: italic;
+   
+}
+.card{
+    height:175px;
+    width:125px;
+    background:white;
+    position: relative;
+    border-radius: 1rem;
+    cursor:pointer;
+}
+.game-container{
+    display:grid;
+    grid-template-columns: repeat(6, auto);
+    column-gap:3%;
+    row-gap: 5%;
+    margin:50px;
+    perspective: 500px;
+}
+.game-info-container{
+    grid-column: 1 / -1;
+    margin-bottom: 3%;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 3%;
+}
+
+.card-back img{
+    width:100%;
+    height:100%;
+    border-radius: 1rem;
+    /* transform:scale(1.5,1.5);
+    transition: transform 5000ms ease-in-out; */
+}
+.card-back {
+    display: flex;
+    
+}
+.card-face{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+.card-back:hover{
+    transform: scale(1.05,1.05);
+    transition: transform 300ms ease-in-out;
+}
+.card-front img{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 1rem;
+}
+.card-front{
+    transform: rotateY(180deg);
+    
+}
+.card-back{
+    transform: rotateY(0);
+}
+
+
+
+.card.visible .card-back {
+    transform:rotateY(-180deg);
+    
+}
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+/* .card.matched img{
+    visibility: hidden;
+    background-image: url("./Assets/img/upside-down.jpeg");
+} */
+.overlay-text{
+    color:red;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align: center;
+    font-size:10rem;
+    font-family:'ITC Benguiat' ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display:none;
+    z-index: 10;
+}
+.overlay-text.visible{
+    display: flex;
+    animation:text-grow 500ms forwards;
+}
+@keyframes text-grow {
+    from {
+        background-color: rgba(0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0,0,0.8);
+        font-size: 8rem;
+    }
+}
+@keyframes winner-text-grow {
+    from {
+        background-color: rgba(0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0,0,0.8);
+        font-size: 4rem;
+    }
+}
+.welcome-small-text{
+    font-size:3rem;
+}
+.game-over-text-small{
+    font-size: 3rem;
+}
+#winner-text.visible {
+    animation:winner-text-grow 500ms forwards !important;
+}
+@media screen and (max-width:968px) {
+    .game-container{
+        grid-template-columns: repeat(5, auto);
+    }
+}
+@media screen and (max-width:850px) {
+    .game-container{
+        grid-template-columns: repeat(4, auto);
+    }
+}
+@media screen and (max-width:700px) {
+    .game-container{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+@media screen and (max-width:490px) {
+    .game-container{
+        grid-template-columns: repeat(2, auto);
+    }
+}
